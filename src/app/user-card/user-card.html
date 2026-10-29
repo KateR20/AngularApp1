@@ -1,0 +1,16 @@
+
+<!-- User profile information card -->
+<div class="user-card">
+  <img
+    [src]="user().profilePicture"
+    [alt]="user().name + ' profile picture'"
+    class="profile-image"
+  />
+
+  <h2>{{ user().name }}'s Profile</h2>
+
+  <p><strong>Name:</strong> {{ user().name }}</p>
+  <p><strong>Age:</strong> {{ user().age }}</p>
+  <p><strong>Role:</strong> {{ user().role }}</p>
+  <p><strong>Location:</strong> {{ user().location }}</p>
+</div>

@@ -1,0 +1,32 @@
+
+<!-- Editable user biography -->
+<div class="bio-card">
+  <h2>About Me</h2>
+
+  @if (!isEditing()) {
+    <p>{{ bio() }}</p>
+
+    <button type="button" (click)="editBio()">
+      Edit Biography
+    </button>
+  } @else {
+    <textarea
+      #bioInput
+      [value]="editedBio()"
+      (input)="editedBio.set(bioInput.value)"
+      rows="5"
+      aria-label="Edit your biography"
+    ></textarea>
+
+    <div class="bio-buttons">
+      <button type="button" (click)="saveBio()">
+        Save Changes
+      </button>
+
+      <button type="button" (click)="cancelEdit()">
+        Cancel
+      </button>
+    </div>
+  }
+</div>
+

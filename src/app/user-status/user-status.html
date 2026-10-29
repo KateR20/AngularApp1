@@ -1,0 +1,17 @@
+
+<!-- User online/offline status -->
+<div class="status-card">
+  <h2>My Availability</h2>
+
+  <p>
+    Current Status:
+    <strong>
+      {{ isOnline() ? 'Online 🟢' : 'Offline 🔴' }}
+    </strong>
+  </p>
+
+  <button type="button" (click)="toggleStatus()">
+    {{ isOnline() ? 'Go Offline' : 'Go Online' }}
+  </button>
+</div>
+

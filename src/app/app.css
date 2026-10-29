@@ -1,0 +1,48 @@
+
+/* Main dashboard layout */
+.dashboard {
+  min-height: 100vh;
+  padding: 50px 25px;
+  background: linear-gradient(135deg, #f5f3ff, #ede9fe);
+  font-family: Arial, sans-serif;
+  box-sizing: border-box;
+}
+
+/* Dashboard heading */
+.dashboard-header {
+  text-align: center;
+  margin-bottom: 45px;
+}
+
+.dashboard-header h1 {
+  color: #4c1d95;
+  font-size: 38px;
+  margin-bottom: 12px;
+}
+
+.dashboard-header p {
+  color: #6b7280;
+  font-size: 18px;
+}
+
+/* Arrange components in a responsive grid */
+.dashboard-content {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 25px;
+  max-width: 1250px;
+  margin: 0 auto;
+  align-items: start;
+}
+
+/* Adjust layout for smaller screens */
+@media (max-width: 900px) {
+  .dashboard-content {
+    grid-template-columns: 1fr;
+    max-width: 450px;
+  }
+
+  .dashboard-header h1 {
+    font-size: 30px;
+  }
+}
